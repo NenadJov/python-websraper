@@ -16,7 +16,7 @@ page_nr=soup.find_all("a",{"class":"Page"})[-1].text
 #print(page_nr)
 
 l=[]
-#base_url= "http://www.pythonhow.com/real-estate/rock-springs-wy/LCWYROCKSPRINGS/t=0&s="
+base_url= "http://www.pythonhow.com/real-estate/rock-springs-wy/LCWYROCKSPRINGS/t=0&s="
 for page in range(0,int(page_nr)*10,10):
     print(base_url+str(page)+".html")
     r = requests.get(base_url+str(page)+".html",headers={'User-agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0'})
